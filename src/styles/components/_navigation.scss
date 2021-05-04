@@ -1,0 +1,27 @@
+.navigation {
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+  }
+
+  ul a {
+    display: inline-block;
+    font-size: $size-x16;
+    text-decoration: none;
+  }
+
+  ul a:hover {
+    color: $color-red;
+  }
+
+  ul li:not(:last-child) {
+    margin-right: $size-x16;
+  }
+}

@@ -1,0 +1,9 @@
+.container {
+  margin: 0 auto;
+  max-width: $size-container;
+  padding: 0 $size-x12;
+
+  &--large {
+    max-width: $size-container-large;
+  }
+}

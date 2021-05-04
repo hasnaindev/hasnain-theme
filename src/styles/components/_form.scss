@@ -1,0 +1,34 @@
+.form {
+  &__row {
+    display: flex;
+  }
+
+  &__group {
+    display: block;
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: $size-x16;
+  }
+
+  &__control {
+    border-radius: $size-x04;
+    display: block;
+    font-family: inherit;
+    font-size: $size-x14;
+    font-weight: bold;
+    padding: $size-x08;
+    width: 100%;
+  }
+
+  &__control,
+  &__control:focus {
+    border: 1px solid $color-grey;
+    outline: 0;
+  }
+
+  &__control:disabled {
+    background-color: $color-grey;
+    cursor: not-allowed;
+  }
+}

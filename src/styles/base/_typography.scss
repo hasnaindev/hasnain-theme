@@ -1,0 +1,118 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-size: $size-x36;
+}
+
+h2 {
+  font-size: $size-x32;
+}
+
+h3 {
+  font-size: $size-x28;
+}
+
+h4 {
+  font-size: $size-x24;
+}
+
+h5 {
+  font-size: $size-x20;
+}
+
+h6 {
+  font-size: $size-x16;
+}
+
+p,
+blockquote {
+  font-size: $size-x18;
+}
+
+ol,
+ul {
+  font-size: $size-x16;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  font-family: inherit;
+}
+
+a {
+  &,
+  &:link,
+  &:visited {
+    color: $color-blue;
+  }
+}
+
+blockquote {
+  border-left: 4px solid $color-grey;
+  font-style: italic;
+  padding: $size-x12;
+  padding-left: $size-x16;
+
+  cite {
+    display: block;
+    margin-top: $size-x12;
+  }
+}
+
+.text-decoration {
+  &-none { text-decoration: none; }
+}
+
+.text {
+  &-uppercase { text-transform: uppercase; }
+  &-lowercase { text-transform: uppercase; }
+  &-capitalize { text-transform: capitalize; }
+
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-center { text-align: center; }
+}
+
+.font-weight {
+  &-bold { font-weight: bold; }
+  &-light { font-weight: lighter; }
+  &-normal { font-weight: normal; }
+}
+
+.font-size {
+  &-x10 { font-size: $size-x10; }
+  &-x12 { font-size: $size-x12; }
+  &-x14 { font-size: $size-x14; }
+  &-x16 { font-size: $size-x16; }
+  &-x18 { font-size: $size-x18; }
+  &-x20 { font-size: $size-x20; }
+  &-x22 { font-size: $size-x22; }
+  &-x24 { font-size: $size-x24; }
+  &-x26 { font-size: $size-x26; }
+  &-x28 { font-size: $size-x28; }
+  &-x30 { font-size: $size-x30; }
+  &-x32 { font-size: $size-x32; }
+
+  &-half { font-size: 0.5em; }
+  &-quater { font-size: 0.25em; }
+  &-3-quaters { font-size: 0.75em; }
+}
+
+.color {
+  &-grey { color: $color-grey; }
+}
+
+.mega-heading { font-size: 6.2rem; }

@@ -1,0 +1,39 @@
+.flex {
+  display: flex;
+
+  &__col:not(:last-child) {
+    margin-right: $size-x24;
+  }
+
+  &__col--1 {
+    flex-basis: 16.6667%;
+  }
+
+  &__col--2 {
+    flex-basis: 33.3333%;
+  }
+
+  &__col--3 {
+    flex-basis: 50%;
+  }
+
+  &__col--4 {
+    flex-basis: 66.6667%;
+  }
+
+  &__col--5 {
+    flex-basis: 83.3333%;
+  }
+
+  &__space--between {
+    justify-content: space-between;
+  }
+
+  &__align--center {
+    align-items: center;
+  }
+
+  &__grow {
+    flex-grow: 1;
+  }
+}

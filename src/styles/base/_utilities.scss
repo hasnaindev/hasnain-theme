@@ -1,0 +1,36 @@
+.clearfix {
+  &::before {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+}
+
+.margin-top {
+  &-small { margin-top: $size-x12; }
+  &-medium { margin-top: $size-x18; }
+  &-large { margin-top: $size-x24; }
+  &-extra-large { margin-top: $size-x30; }
+  &-extra-extra-large { margin-top: $size-x36; }
+}
+
+.margin-bottom {
+  &-small { margin-bottom: $size-x12; }
+  &-medium { margin-bottom: $size-x18; }
+  &-large { margin-bottom: $size-x24; }
+  &-extra-large { margin-bottom: $size-x30; }
+  &-extra-extra-large { margin-bottom: $size-x36; }
+}
+
+.d-flex { display: flex; }
+.d-block { display: block; }
+
+.align-center { align-items: center; }
+.space-between { justify-content: space-between; }
+
+.w-25 { width: 25%; }
+.w-50 { width: 50%; }
+.w-75 { width: 75%; }
+
+.float-left { float: left; }
+.float-right { float: right; }
