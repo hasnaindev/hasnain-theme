@@ -89,6 +89,14 @@
       ->add_script('runtime', '/assets/scripts/runtime.js')
       ->add_script('main', '/assets/scripts/main.js')
       ->enqueue();
+
+      wp_localize_script(
+        'main',
+        'THEME_REST',
+        [
+          'ajax_url' => admin_url('admin-ajax.php'),
+        ],
+      );
   }
 
   /**
@@ -139,8 +147,26 @@
     // add_filter('tiny_mce_plugins', 'disable_emojicons_tinymce');
   }
 
+  /**
+   * Simply registers shortcodes, does not require any hooks.
+   *
+   * @return void
+   */
   function register_shortcodes(): void
   {
     $shortcode = new Shortcodes\Newsletter();
     $shortcode->register();
+  }
+
+  /**
+   * Gets a list of REST API routes which can be registered under
+   * `wp_ajax_` and `wp_ajax_nopriv_` action hooks.
+   *
+   * @return array Tuples where [0] is route postfix, [1] is handler and [2] is whether route should be nopriv.
+   */
+  function get_rest_api_routes(): array
+  {
+    return [
+      ['create_newsletter', '\Hasnain\REST\Newsletter::create', true],
+    ];
   }

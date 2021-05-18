@@ -44,3 +44,15 @@
    * for adding or register shortcodes via `add_shortcode` function.
    */
   Hasnain\register_shortcodes();
+
+  /**
+   * Registering REST API routes.
+   */
+  $routes = Hasnain\get_rest_api_routes();
+
+  foreach ($routes as $route)
+  {
+    add_action("wp_ajax_{$route[0]}", $route[1]);
+    if ($route[2]) add_action("wp_ajax_nopriv_{$route[0]}", $route[1]);
+  }
+

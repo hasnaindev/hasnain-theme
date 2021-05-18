@@ -13,10 +13,10 @@
 
   &__control {
     border-radius: $size-x04;
+    color: rgba(0, 0, 0, 0.8);
     display: block;
-    font-family: inherit;
-    font-size: $size-x14;
-    font-weight: bold;
+    font-size: $size-x16;
+    font-weight: normal;
     padding: $size-x08;
     width: 100%;
   }
@@ -28,7 +28,7 @@
   }
 
   &__control:disabled {
-    background-color: $color-grey;
+    background-color: $color-light-grey;
     cursor: not-allowed;
   }
 }
