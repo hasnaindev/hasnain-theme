@@ -16,11 +16,11 @@
   }
 
   &:hover {
-    transform: translateY(-$size-x04);
+    transform: translateY(-$size-x02);
   }
 
   &:active {
-    transform: translateY(-$size-x02);
+    transform: translateY(-$size-x01);
   }
 
   &:disabled {

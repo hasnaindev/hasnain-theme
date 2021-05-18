@@ -1,13 +1,14 @@
+import Vue from 'vue';
+
 class Newsletter {
   constructor(element) {
     this.element = element;
-
-    this.run();
+    this.instance = null;
+    this.init();
   }
 
-  run() {
-    /* eslint-disable-next-line */
-    new Vue({
+  init() {
+    this.instance = new Vue({
       el: this.element,
       data: () => ({
         email: '',

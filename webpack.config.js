@@ -28,6 +28,7 @@ module.exports = ({ mode }) => {
   const module = {
     rules: [
       { test: /.js$/, exclude: /(node_modules)/, loader: 'babel-loader' },
+      { test: /.svelte$/, use: { loader: 'svelte-loader' } },
     ],
   };
 
@@ -65,9 +66,16 @@ module.exports = ({ mode }) => {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all',
+          chunks: 'async',
         },
       },
+    },
+  };
+
+  const resolve = {
+    alias: {
+      'vue': 'vue/dist/vue.js',
+      'svelte': path.resolve("node_modules", "svelte"),
     },
   };
 
@@ -78,6 +86,7 @@ module.exports = ({ mode }) => {
     module,
     plugins,
     optimization,
+    resolve,
     mode,
   };
 };
