@@ -30,8 +30,12 @@ h6 {
   font-size: $size-x16;
 }
 
-p,
+p {
+  font-size: $size-x18;
+}
+
 blockquote {
+  color: rgba($color-black, 0.65);
   font-size: $size-x18;
 }
 
@@ -64,7 +68,7 @@ a {
 }
 
 blockquote {
-  border-left: 4px solid $color-grey;
+  border-left: 2px solid $color-light-grey;
   font-style: italic;
   padding: $size-x12;
   padding-left: $size-x16;
