@@ -12,7 +12,8 @@
 
     function __construct()
     {
-      $this->tag = end(explode('\\', get_called_class()));
+      $parts = explode('\\', get_called_class());
+      $this->tag = end($parts);
     }
 
     function register(): void

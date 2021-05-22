@@ -10,11 +10,15 @@
   {
     function render($attributes, string $content): string
     {
+      $cite = $attributes['cite'];
+      $testimony = $attributes['testimony'];
+
+      $content = $content
+        ?: 'I send out a short email each weekday with code snippets, tools, techniques and interesting stuff from around the web. Join 10,800+ daily subscribers.';
+
       return "
         <div data-component='newsletter.vue'>
-          <p>
-            I send out a short email each weekday with code snippets, tools, techniques and interesting stuff from around the web. Join 10,800+ daily subscribers.
-          </p>
+          <p>{$content}</p>
           <notification :title='notification.title' :message='notification.message'></notification>
           <form
             id='newsletter-form'
@@ -45,10 +49,7 @@
               </div>
             </div>
           </form>
-          <blockquote>
-            This has easily been the most valuable newsletter I have ever subscribed to. Thank you very much for sharing and educating!
-            <cite>Muhammad Hasnain</cite>
-          </blockquote>
+          <blockquote>{$testimony}<cite>{$cite}</cite></blockquote>
         </div>
       ";
     }

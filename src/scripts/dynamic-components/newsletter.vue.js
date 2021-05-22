@@ -5,20 +5,21 @@ import { createNewsletter } from '../api';
 class Newsletter {
   constructor(element) {
     this.element = element;
-    this.run();
+    this.instance = null;
+    this.timeoutRef = null;
+    this.init();
   }
 
-  run() {
-    // eslint-disable-next-line
-    new Vue({
+  init() {
+    this.instance = new Vue({
       el: this.element,
       data: {
         email: '',
+        loading: false,
         notification: {
           title: '',
           message: '',
         },
-        loading: false,
       },
       methods: {
         submit(event) {
@@ -32,15 +33,15 @@ class Newsletter {
               this.notification.message =
                 'Thank you for subscribing to our newsletter!';
             })
-            .catch((error) => {
-              console.error(error);
-
+            .catch(() => {
               this.notification.title = 'Failed';
               this.notification.message =
                 'Oops! Could not subscribe, please try again!';
             })
             .finally(() => {
-              setTimeout(() => {
+              clearTimeout(this.timeoutRef);
+
+              this.timeoutRef = setTimeout(() => {
                 this.notification.title = '';
                 this.notification.message = '';
               }, 5000);
