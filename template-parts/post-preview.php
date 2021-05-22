@@ -8,11 +8,11 @@
       }
 
     ?>
-    <h2 class="flex flex__align--center">
-      <a href="<?php echo get_the_permalink(); ?>" class="flex__grow" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
+    <h2>
+      <a href="<?php echo get_the_permalink(); ?>" class="d-block flex__grow margin-bottom-medium" title="<?php the_title(); ?>" alt="<?php the_title(); ?>">
         <?php the_title(); ?>
       </a>
-      <span class="color-grey d-block font-size-half font-weight-light">
+      <span class="color-grey d-block font-size-x14 font-weight-normal">
         <?php the_time('F j, Y'); ?>
       </span>
     </h2>

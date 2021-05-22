@@ -154,8 +154,12 @@
    */
   function register_shortcodes(): void
   {
-    $shortcode = new Shortcodes\Newsletter();
-    $shortcode->register();
+    $shortcodes = [
+      new Shortcodes\Image(),
+      new Shortcodes\Newsletter(),
+    ];
+
+    foreach ($shortcodes as $shortcode) $shortcode->register();
   }
 
   /**

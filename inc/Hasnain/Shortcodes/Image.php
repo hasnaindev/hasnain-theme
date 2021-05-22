@@ -12,8 +12,7 @@
     {
       $src = $attributes['src'];
       $alt = $attributes['alt'];
-      $title = $attributes['title'] ?: $alt;
 
-      return "<img src='{$src}' alt='{$alt}' title='{$title}' />";
+      return "<img src='{$src}' alt='{$alt}' class='margin-bottom-extra-extra-large' />";
     }
   }

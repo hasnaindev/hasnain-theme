@@ -9,10 +9,12 @@
 
     ?>
     <h2>
-      <span class="color-grey d-block font-size-half font-weight-light margin-bottom-small">
+      <span class="d-block flex__grow margin-bottom-medium">
+        <?php the_title(); ?>
+      </span>
+      <span class="color-grey d-block font-size-half font-weight-normal margin-bottom-small">
         <?php the_time('F j, Y'); ?>
       </span>
-      <?php the_title(); ?>
     </h2>
   </header>
   <main>
