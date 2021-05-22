@@ -8,14 +8,14 @@
       }
 
     ?>
-    <h2>
+    <h1 class="font-size-x32">
       <span class="d-block flex__grow margin-bottom-medium">
         <?php the_title(); ?>
       </span>
-      <span class="color-grey d-block font-size-half font-weight-normal margin-bottom-small">
-        <?php the_time('F j, Y'); ?>
-      </span>
-    </h2>
+    </h1>
+    <span class="color-grey d-block font-size-x14 font-weight-bold margin-bottom-small">
+      <?php the_time('F j, Y'); ?>
+    </span>
   </header>
   <main>
     <?php the_content(); ?>
@@ -26,7 +26,7 @@
     $next_post = get_next_post();
     $previous_post = get_previous_post();
 
-    if ($next_post || $previous_post):
+    if (false && $next_post || $previous_post):
 
   ?>
 
