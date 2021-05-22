@@ -2,6 +2,8 @@ import './notification.vue';
 import Vue from 'vue';
 import { createNewsletter } from '../api';
 
+const emailRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 class Newsletter {
   constructor(element) {
     this.element = element;
@@ -25,18 +27,25 @@ class Newsletter {
         submit(event) {
           event.preventDefault();
 
+          this.email = this.email.replace(/\s+/g, '').toLowerCase();
+
+          if (!emailRegEx.test(this.email)) {
+            this.notification.title = 'Oopsie!';
+            this.notification.message =
+              'Are you sure this is a valid email address?';
+            return;
+          }
+
           createNewsletter({ email: this.email })
-            .then(() => {
+            .then((response) => {
               this.email = '';
 
-              this.notification.title = 'Subscribed';
-              this.notification.message =
-                'Thank you for subscribing to our newsletter!';
+              this.notification.title = 'Subscribed!';
+              this.notification.message = response.message;
             })
-            .catch(() => {
-              this.notification.title = 'Failed';
-              this.notification.message =
-                'Oops! Could not subscribe, please try again!';
+            .catch((error) => {
+              this.notification.title = 'Oopsie!';
+              this.notification.message = error.message;
             })
             .finally(() => {
               clearTimeout(this.timeoutRef);

@@ -24,7 +24,7 @@
             id='newsletter-form'
             class='form'
             style='margin-bottom: 2.2rem;'
-            v-on:submit.prevent='submit'
+            @submit.prevent='submit'
           >
             <div class='flex flex__space--between flex__align--center'>
               <div class='flex__col flex__grow'>
@@ -35,7 +35,7 @@
                   placeholder='Email Address'
                   required='true'
                   v-model='email'
-                  v-bind:disabled='loading'
+                  :disabled='loading'
                 />
               </div>
               <div class='flex__col flex__col--1'>
@@ -44,7 +44,7 @@
                   type='submit'
                   class='button button--primary'
                   value='Subscribe'
-                  v-bind:disabled='loading'
+                  :disabled='loading'
                 />
               </div>
             </div>
