@@ -39,6 +39,11 @@ blockquote {
   font-size: $size-x18;
 }
 
+p,
+blockquote {
+  line-height: 1.5;
+}
+
 ol,
 ul {
   font-size: $size-x16;

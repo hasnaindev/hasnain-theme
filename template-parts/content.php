@@ -1,5 +1,5 @@
 <article>
-  <header>
+  <header class="margin-bottom-extra-extra-extra-large">
     <?php
 
       if (has_post_thumbnail())

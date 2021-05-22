@@ -12,6 +12,7 @@
   &-large { margin-top: $size-x24; }
   &-extra-large { margin-top: $size-x30; }
   &-extra-extra-large { margin-top: $size-x36; }
+  &-extra-extra-extra-large { margin-top: $size-x42; }
 }
 
 .margin-bottom {
@@ -20,6 +21,7 @@
   &-large { margin-bottom: $size-x24; }
   &-extra-large { margin-bottom: $size-x30; }
   &-extra-extra-large { margin-bottom: $size-x36; }
+  &-extra-extra-extra-large { margin-bottom: $size-x42; }
 }
 
 .d-flex { display: flex; }
