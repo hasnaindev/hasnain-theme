@@ -18,7 +18,7 @@
       </nav>
       <p class="text-center">
         <span class="font-size-3-quaters">
-          <?php _e('Made with 💔 in Mardan. Concept and design inspired by', 'hasnain'); ?>
+          <?php _e('Made with 💖 Design inspired by', 'hasnain'); ?>
           <a href="https://gomakethings.com" title="Go Make Things is a website that is focused on making vanilla JavaScript easy to learn">
             <?php _e('GoMakeThings', 'hasnain'); ?>
           </a>
