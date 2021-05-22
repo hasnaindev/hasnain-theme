@@ -79,6 +79,11 @@ blockquote {
   }
 }
 
+.suppress {
+  color: $color-black !important;
+  text-decoration: none !important;
+}
+
 .text-decoration {
   &-none { text-decoration: none; }
 }
@@ -120,6 +125,7 @@ blockquote {
 
 .color {
   &-grey { color: $color-grey; }
+  &-black { color: $color-black; }
 }
 
 .mega-heading { font-size: 6.2rem; }

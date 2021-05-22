@@ -1,9 +1,16 @@
 <?php
 
   get_header();
-  while (have_posts())
+  if (have_posts())
   {
-    the_post();
-    get_template_part('template-parts/post', 'preview');
+    while (have_posts())
+    {
+      the_post();
+      get_template_part('template-parts/post', 'preview');
+    }
+  }
+  else
+  {
+    get_template_part('template-parts/post', '404');
   }
   get_footer();
