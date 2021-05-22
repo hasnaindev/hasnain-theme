@@ -1,0 +1,15 @@
+blockquote {
+  border-left: 2px solid $color-light-grey;
+  margin-bottom: $size-x26;
+  padding: $size-x12;
+  padding-left: $size-x16;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  cite {
+    display: block;
+    margin-top: $size-x18;
+  }
+}

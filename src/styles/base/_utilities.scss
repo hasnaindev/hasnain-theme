@@ -7,6 +7,7 @@
 }
 
 .margin-top {
+  &-non { margin-top: 0; }
   &-small { margin-top: $size-x12; }
   &-medium { margin-top: $size-x18; }
   &-large { margin-top: $size-x24; }
@@ -16,6 +17,7 @@
 }
 
 .margin-bottom {
+  &-non { margin-bottom: 0; }
   &-small { margin-bottom: $size-x12; }
   &-medium { margin-bottom: $size-x18; }
   &-large { margin-bottom: $size-x24; }

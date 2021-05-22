@@ -32,16 +32,18 @@ h6 {
 
 p {
   font-size: $size-x18;
-}
-
-blockquote {
-  color: rgba($color-black, 0.65);
-  font-size: $size-x18;
-}
-
-p,
-blockquote {
   line-height: 1.5;
+}
+
+blockquote {
+  color: $color-dark-grey;
+  font-style: italic;
+
+  &,
+  p {
+    font-size: $size-x16;
+    line-height: 1.8;
+  }
 }
 
 ol,
@@ -69,18 +71,6 @@ a {
   &:link,
   &:visited {
     color: $color-blue;
-  }
-}
-
-blockquote {
-  border-left: 2px solid $color-light-grey;
-  font-style: italic;
-  padding: $size-x12;
-  padding-left: $size-x16;
-
-  cite {
-    display: block;
-    margin-top: $size-x12;
   }
 }
 

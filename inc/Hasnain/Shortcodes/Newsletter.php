@@ -49,7 +49,7 @@
               </div>
             </div>
           </form>
-          <blockquote>{$testimony}<cite>{$cite}</cite></blockquote>
+          <blockquote class='margin-bottom-non'>{$testimony}<cite>{$cite}</cite></blockquote>
         </div>
       ";
     }
