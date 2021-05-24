@@ -9,7 +9,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('transition'); ?>>
 
   <header class="header">
     <nav class="navigation">
@@ -33,4 +33,7 @@
     </nav>
   </header>
 
-  <main class="container clearfix">
+  <div data-barba="wrapper">
+    <main class="container clearfix" data-barba="container">
+
+    <div class="slide"></div>

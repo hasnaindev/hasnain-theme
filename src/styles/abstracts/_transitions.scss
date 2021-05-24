@@ -15,12 +15,25 @@
   overflow: hidden;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.6;
+.barba-leave-active,
+.barba-enter-active,
+.barba-leave-active .slide,
+.barba-enter-active .slide {
+  transition: transform 0.6s;
 }
 
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+.barba-leave .slide {
+  transform: translateX(-100%);
+}
+
+.barba-leave-to .slide {
+  transform: translateX(0);
+}
+
+.barba-enter .slide {
+  transform: translateX(0);
+}
+
+.barba-enter-to .slide {
+  transform: translateX(100%);
 }

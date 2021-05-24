@@ -45,6 +45,10 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
+    "@barba/css": "^2.1.15",
+    "@barba/prefetch": "^2.1.10",
+    "animejs": "^3.2.1",
     "lozad": "^1.16.0",
     "nanoajax": "^0.4.3",
     "prismjs": "^1.23.0",

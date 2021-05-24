@@ -1,5 +1,5 @@
-@import './abstracts/transitions';
 @import './abstracts/variables';
+@import './abstracts/transitions';
 
 @import './base/reset';
 @import './base/typography';
@@ -11,7 +11,20 @@
 @import './components/footer';
 @import './components/form';
 @import './components/header';
+@import './components/loader';
 @import './components/navigation';
 
 @import './layouts/container';
 @import './layouts/flex';
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.transition {
+  transition: opacity 1s ease;
+}
