@@ -65,7 +65,7 @@
      * use `wp_get_theme()->get('Version')` instead of microtime
      * before going into production.
      */
-    $enqueuer = new Enqueuer((string)microtime());
+    $enqueuer = new Enqueuer(wp_get_theme()->get('Version'));
 
     /**
      * Let's deregister some scripts that the
