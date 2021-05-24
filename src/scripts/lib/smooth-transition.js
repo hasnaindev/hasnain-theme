@@ -14,6 +14,7 @@ export const initSmoothTransition = () => {
         enter() {},
       },
     ],
+    prevent: ({ el }) => el.href && el.href.includes('wp-admin'),
   });
 };
 
