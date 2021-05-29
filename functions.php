@@ -33,6 +33,12 @@
   add_action('wp_enqueue_scripts', 'Hasnain\enqueue_assets');
 
   /**
+   * Echo critical CSS in head tag, inspect tools
+   * cannot access source-maps for these styles.
+   */
+  add_action('wp_head', 'Hasnain\print_critical_css');
+
+  /**
    * Removes WordPress theme bloat, this doesn't seem to have
    * significant impact on the load time of the website.
    */
