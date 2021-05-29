@@ -17,7 +17,11 @@
         ?: 'I send out a short email each weekday with code snippets, tools, techniques and interesting stuff from around the web. Join 10,800+ daily subscribers.';
 
       return "
-        <div data-component='newsletter.vue'>
+        <div
+          data-module='newsletter.vue'
+          data-lazy-event='focus'
+          data-lazy-target='newsletter-email'
+        >
           <p>{$content}</p>
           <notification :title='notification.title' :message='notification.message'></notification>
           <form
@@ -25,6 +29,7 @@
             class='form'
             style='margin-bottom: 2.2rem;'
             @submit.prevent='submit'
+            submit='return false'
           >
             <div class='flex flex__space--between flex__align--center'>
               <div class='flex__col flex__grow'>
