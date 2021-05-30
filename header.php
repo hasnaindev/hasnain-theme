@@ -33,7 +33,6 @@
     </nav>
   </header>
 
-  <div data-barba="wrapper">
-    <main class="container clearfix" data-barba="container">
+  <main class="container clearfix">
 
     <div class="slide"></div>

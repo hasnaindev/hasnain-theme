@@ -1,9 +1,24 @@
+import { on, off, select } from '../lib/dom-helpers';
+
 export const DOMStrings = {
   modules: '[data-module]',
 };
 
 export const DOMElements = {
   modules: document.querySelectorAll(DOMStrings.modules),
+};
+
+const importModule = (moduleName, args = null) => {
+  import(`./${moduleName}.js`)
+    .then((module) => {
+      if (module && module.default) {
+        module.default(args);
+      }
+    })
+    .catch(() => {
+      /* eslint-disable-next-line */
+      console.error(`Failed to load module ${moduleName}`);
+    });
 };
 
 export const initDynamicComponents = () => {
@@ -20,37 +35,18 @@ export const initDynamicComponents = () => {
 
     if (moduleName && lazyTarget && lazyEvent) {
       const lazyTargetElement =
-        lazyTarget === 'this' ? component : document.getElementById(lazyTarget);
+        lazyTarget === 'this' ? component : select(lazyTarget, component);
 
       if (lazyTargetElement) {
-        lazyTargetElement.addEventListener(
-          lazyEvent,
-          () => {
-            import(`./${moduleName}.js`)
-              .then((module) => {
-                if (module && module.default) {
-                  module.default(component);
-                }
-              })
-              .catch(() => {
-                /* eslint-disable-next-line */
-                console.error(`Failed to load module ${moduleName}`);
-              });
-          },
-          { once: true },
-        );
+        const importModuleOnEvent = () => {
+          importModule(moduleName, component);
+          off(lazyTargetElement, lazyEvent, importModuleOnEvent);
+        };
+
+        on(lazyTargetElement, lazyEvent, importModuleOnEvent);
       }
     } else if (moduleName) {
-      import(`./${moduleName}.js`)
-        .then((module) => {
-          if (module && module.default) {
-            module.default(component);
-          }
-        })
-        .catch(() => {
-          /* eslint-disable-next-line */
-          console.error(`Failed to load module ${moduleName}`);
-        });
+      importModule(moduleName, component);
     }
   }
 };

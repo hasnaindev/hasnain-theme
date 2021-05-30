@@ -20,7 +20,7 @@
         <div
           data-module='newsletter.vue'
           data-lazy-target='this'
-          data-lazy-event='mousemove'
+          data-lazy-event='[\"mousemove\", \"click\", \"touchstart\"]'
         >
           <p>{$content}</p>
           <notification :title='notification.title' :message='notification.message'></notification>

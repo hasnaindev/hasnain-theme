@@ -1,5 +1,4 @@
-    </main>
-  </div>
+  </main>
 
   <footer class="footer">
     <div class="container container--large clearfix">
