@@ -19,7 +19,8 @@ export const initDynamicComponents = () => {
     const lazyTarget = component.getAttribute('data-lazy-target');
 
     if (moduleName && lazyTarget && lazyEvent) {
-      const lazyTargetElement = document.getElementById(lazyTarget);
+      const lazyTargetElement =
+        lazyTarget === 'this' ? component : document.getElementById(lazyTarget);
 
       if (lazyTargetElement) {
         lazyTargetElement.addEventListener(

@@ -19,8 +19,8 @@
       return "
         <div
           data-module='newsletter.vue'
-          data-lazy-event='focus'
-          data-lazy-target='newsletter-email'
+          data-lazy-target='this'
+          data-lazy-event='mousemove'
         >
           <p>{$content}</p>
           <notification :title='notification.title' :message='notification.message'></notification>
