@@ -36,6 +36,8 @@ class Newsletter {
             return;
           }
 
+          this.loading = true;
+
           createNewsletter({ email: this.email })
             .then((response) => {
               this.email = '';
@@ -48,6 +50,8 @@ class Newsletter {
               this.notification.message = error.message;
             })
             .finally(() => {
+              this.loading = false;
+
               clearTimeout(this.timeoutRef);
 
               this.timeoutRef = setTimeout(() => {
