@@ -1,9 +1,9 @@
+import { initPrefetch } from './lib/prefetch';
 import { initLazyLoad } from './lib/lazy-load';
-import { initSmoothTransition } from './lib/smooth-transition';
-import { initDynamicComponents } from './dynamic-components/dynamic-components-initializer';
+import { initDynamicComponents } from './dynamic-components/init';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initSmoothTransition();
+  initPrefetch();
   initLazyLoad();
   initDynamicComponents();
 });
