@@ -2,10 +2,11 @@
 
   namespace Hasnain;
 
-  function is_dev(): bool
-  {
-    return wp_get_environment_type() == 'development';
-  }
+  /**
+   * Initialize environment and environment
+   * theme variables for the theme.
+   */
+  Env::init();
 
   /**
    * Adds theme support and registers nav menus,
@@ -68,7 +69,7 @@
      * Dynamic `theme_version` based on environment
      * in order to enable or disable caching.
      */
-    $theme_version = is_dev()
+    $theme_version = Env::is_dev()
       ? (string)microtime()
       : wp_get_theme()->get('Version');
 
@@ -97,7 +98,9 @@
      * we'll inject styles in head using `print_critical_css`
      * function.
      */
-    is_dev() && $enqueuer->add_style('main', '/assets/styles/main.css');
+    if (Env::is_dev()) {
+      $enqueuer->add_style('main', '/assets/styles/main.css');
+    }
 
     /**
      * Adding stylesheets, fonts, scripts and other assets
@@ -129,7 +132,7 @@
    */
   function print_critical_css(): void
   {
-    if (!is_dev()) {
+    if (!Env::is_dev()) {
       echo "";
     }
   }
