@@ -49,6 +49,7 @@
     "@barba/css": "^2.1.15",
     "@barba/prefetch": "^2.1.10",
     "animejs": "^3.2.1",
+    "bulma": "^0.9.2",
     "lozad": "^1.16.0",
     "nanoajax": "^0.4.3",
     "prefetch": "^0.2.1",
