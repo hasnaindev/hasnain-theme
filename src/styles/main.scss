@@ -1,20 +1,5 @@
 @import '../../node_modules/bulma/bulma.sass';
 
 @import './abstracts/variables';
-@import './abstracts/transitions';
 
-@import './base/reset';
-@import './base/typography';
-@import './base/utilities';
-
-@import './components/blockquote';
-@import './components/brand';
-@import './components/button';
-@import './components/footer';
-@import './components/form';
-@import './components/header';
-@import './components/loader';
-@import './components/navigation';
-
-@import './layouts/container';
-@import './layouts/flex';
+@import './layouts/theme-container';

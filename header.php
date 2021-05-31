@@ -11,28 +11,33 @@
 
 <body <?php body_class('transition'); ?>>
 
-  <header class="header">
-    <nav class="navigation">
-      <div class="navigation__container container container--large">
-
-        <a href="<?php echo site_url(); ?>" class="brand">
-          <?php echo bloginfo('name'); ?>
+  <header class="mb-6">
+    <nav class="navbar theme-container--large" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="<?php echo site_url(); ?>">
+          <img src="<?php echo get_template_directory_uri() . '/static/images/logo-1.png'; ?>" />
         </a>
 
-        <?php
-
-          wp_nav_menu([
-            'container' => 'div',
-            'menu_class' => 'navigation__menu',
-            'theme_location' => 'main-menu',
-          ]);
-
-        ?>
-
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
+      <?php
+        wp_nav_menu(array(
+          'theme_location' => 'main-menu',
+          'depth' => 0,
+          'container' => false,
+          'menu_class' => 'navbar-menu',
+          'menu_id' => 'primary-menu',
+          'after' => "</div>",
+          'walker' => new Hasnain\Walkers\Bulma(),
+        ));
+      ?>
     </nav>
   </header>
 
-  <main class="container clearfix">
+  <main class="theme-container clearfix">
 
     <div class="slide"></div>

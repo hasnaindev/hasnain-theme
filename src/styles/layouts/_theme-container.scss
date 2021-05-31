@@ -1,7 +1,11 @@
-.container {
-  margin: 0 auto;
+.theme-container {
   max-width: $size-container;
-  padding: 0 $size-x12;
+
+  &,
+  &--large {
+    margin: 0 auto;
+    padding: 0 $size-x12;
+  }
 
   &--large {
     max-width: $size-container-large;
