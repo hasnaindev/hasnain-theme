@@ -14,6 +14,8 @@
    * @access public
    */
   class Env {
+    protected static string $theme_env = '';
+
     /**
      * Initializes the Env class with environment
      * variables, must run before any other method
@@ -27,6 +29,8 @@
       {
         define('THEME_ENV', 'production');
       }
+
+      self::$theme_env = THEME_ENV;
     }
 
     /**
