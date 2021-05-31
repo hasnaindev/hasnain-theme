@@ -26,35 +26,37 @@
           <notification :title='notification.title' :message='notification.message'></notification>
           <form
             id='newsletter-form'
-            class='form'
-            style='margin-bottom: 2.2rem;'
+            class='my-5'
             @submit.prevent='submit'
             submit='return false'
           >
-            <div class='flex flex__space--between flex__align--center'>
-              <div class='flex__col flex__grow'>
+            <div class='columns'>
+              <div class='column is-four-fifths'>
                 <input
                   id='newsletter-email'
                   type='email'
-                  class='form__control'
+                  class='input is-primary'
                   placeholder='Email Address'
                   required='true'
                   v-model='email'
                   :disabled='loading'
                 />
               </div>
-              <div class='flex__col flex__col--1'>
+              <div class='column'>
                 <input
                   id='newsletter-submit'
                   type='submit'
-                  class='button button--primary'
+                  class='button is-primary w-100'
                   value='Subscribe'
                   :disabled='loading'
                 />
               </div>
             </div>
           </form>
-          <blockquote class='margin-bottom-non'>{$testimony}<cite>{$cite}</cite></blockquote>
+          <blockquote>
+            <div>{$testimony}</div>
+            <div><cite>{$cite}</cite></div>
+          </blockquote>
         </div>
       ";
     }

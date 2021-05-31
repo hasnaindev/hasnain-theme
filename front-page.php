@@ -8,7 +8,7 @@
 
 ?>
 
-  <div class="wysiwyg"><?php the_content(); ?></div>
+  <div class="content"><?php the_content(); ?></div>
 
 <?php
 
