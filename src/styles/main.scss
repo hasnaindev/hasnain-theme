@@ -1,3 +1,5 @@
+@import '../../node_modules/bulma/bulma.sass';
+
 @import './abstracts/variables';
 @import './abstracts/transitions';
 
@@ -16,15 +18,3 @@
 
 @import './layouts/container';
 @import './layouts/flex';
-
-.invisible {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
-
-.transition {
-  transition: opacity 1s ease;
-}

@@ -6,11 +6,12 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "concurrently \"npm run webpack:dev\" \"npm run node-sass:dev\"",
-    "build": "npm run webpack:build && npm run node-sass:build",
+    "build": "npm run webpack:build && npm run node-sass:build && npm run purgecss",
     "webpack:dev": "webpack --env.mode=development --watch",
     "webpack:build": "webpack --env.mode=production",
     "node-sass:dev": "node-sass-chokidar src/styles/main.scss -o assets/styles -w --source-map true",
-    "node-sass:build": "node-sass-chokidar src/styles/main.scss -o assets/styles --source-map true  --output-style compressed"
+    "node-sass:build": "node-sass-chokidar src/styles/main.scss -o assets/styles --source-map true  --output-style compressed",
+    "purgecss": "node purgecss.config.js"
   },
   "keywords": [
     "wordpress",
