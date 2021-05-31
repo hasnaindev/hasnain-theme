@@ -1,7 +1,7 @@
 <?php
 
   /**
-   * Single template that displays single post.
+   * Page template that displays all pages.
    */
 
   get_header();

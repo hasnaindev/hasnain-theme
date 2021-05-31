@@ -1,0 +1,38 @@
+.wysiwyg {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: $size-x32;
+  }
+
+  h1 { font-size: $size-x36; }
+  h2 { font-size: $size-x32; }
+  h3 { font-size: $size-x28; }
+  h4 { font-size: $size-x24; }
+  h5 { font-size: $size-x20; }
+  h6 { font-size: $size-x16; }
+
+  p {
+    font-size: $size-x18;
+    line-height: $size-x28;
+  }
+
+  blockquote {
+    font-size: $size-x16;
+    font-style: italic;
+    line-height: $size-x26;
+  }
+
+  p,
+  blockquote {
+    margin-bottom: $size-x20;
+  }
+
+  ol,
+  ul {
+    font-size: $size-x16;
+  }
+}

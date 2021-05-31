@@ -40,5 +40,3 @@
   </header>
 
   <main class="theme-container mb-6">
-
-    <div class="slide"></div>
